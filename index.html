@@ -2,24 +2,32 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>안녕</title>
+  <title>레를 아십니까?</title>
   <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-      background: #fffbe7;
+      padding: 0;
+      background: url("bg.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial Black', sans-serif;
     }
-    h1 {
-      font-size: 120px;
-      color: #ff2d2d;
-      font-weight: bold;
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 80px;
+      text-shadow: 4px 4px 10px black;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
     }
   </style>
 </head>
 <body>
-  <h1>안녕</h1>
+  <div class="overlay">레를 아십니까?</div>
 </body>
 </html>
